@@ -1,0 +1,214 @@
+.header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: relative;
+}
+
+/* ロゴ */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  z-index: 1001;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logoText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  display: none;
+}
+
+/* デスクトップメニュー */
+.desktopNav {
+  display: flex;
+  gap: 30px;
+}
+
+.navLink {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #007bff;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* ハンバーガーメニューボタン */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburgerLine {
+  width: 100%;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* モバイルメニュー */
+.mobileNav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.mobileNavOpen {
+  right: 0;
+}
+
+.mobileNavContent {
+  padding: 80px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.mobileNavLink:hover {
+  background: #f8f9fa;
+  color: #007bff;
+  transform: translateX(5px);
+}
+
+.mobileNavIcon {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+/* オーバーレイ */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+/* レスポンシブ設定 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .logoText {
+    display: block;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+  /* デスクトップメニューを非表示 */
+  .desktopNav {
+    display: none;
+  }
+
+  /* ハンバーガーメニューを表示 */
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoText {
+    font-size: 1rem;
+  }
+
+  .mobileNav {
+    width: 100vw;
+    right: -100vw;
+  }
+
+  .mobileNavOpen {
+    right: 0;
+  }
+
+  .container {
+    height: 60px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+}
