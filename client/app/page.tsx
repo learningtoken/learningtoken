@@ -10,7 +10,8 @@ export default function Home() {
       <section className={styles.hero}>
         <img src="/hero-image.svg" alt="Company Hero" className={styles.heroImage} />
         <div className={styles.heroContent}>
-          <h1>株式会社サンプルへようこそ</h1>
+          <h1>Learning Token 株式会社へようこそ</h1>
+          <p>※Learning Token 株式会社は現在設立準備中です</p>
           <p>私たちは革新的なソリューションを提供し、お客様のビジネスの成長をサポートします。</p>
           <Link href={pagesPath.company.$url()} className={styles.ctaButton}>
             会社概要を見る
@@ -27,7 +28,7 @@ export default function Home() {
           </div>
           <div className={styles.featureCard}>
             <h3>豊富な実績</h3>
-            <p>多くの企業様にご利用いただいた実績があります。</p>
+            <p>多くの教育機関・企業様にご利用いただいた実績があります。</p>
           </div>
           <div className={styles.featureCard}>
             <h3>充実したサポート</h3>

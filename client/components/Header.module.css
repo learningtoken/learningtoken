@@ -24,6 +24,7 @@
   gap: 10px;
   text-decoration: none;
   z-index: 1001;
+  flex-shrink: 0;
 }
 
 .logo img {
@@ -50,6 +51,7 @@
   padding: 10px 0;
   position: relative;
   transition: color 0.3s;
+  white-space: nowrap;
 }
 
 .navLink:hover {
@@ -83,6 +85,7 @@
   cursor: pointer;
   padding: 0;
   z-index: 1001;
+  flex-shrink: 0;
 }
 
 .hamburgerLine {
@@ -117,6 +120,7 @@
   box-shadow: -2px 0 10px rgba(0,0,0,0.1);
   transition: right 0.3s ease;
   z-index: 999;
+  overflow-y: auto;
 }
 
 .mobileNavOpen {
@@ -212,3 +216,41 @@
     height: 30px;
   }
 }
+
+/* アクセシビリティ */
+@media (prefers-reduced-motion: reduce) {
+  .hamburgerLine,
+  .mobileNav,
+  .navLink::after,
+  .mobileNavLink {
+    transition: none;
+  }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+  .header {
+    background: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+  }
+
+  .navLink,
+  .logoText,
+  .hamburgerLine {
+    color: #fff;
+    background: #fff;
+  }
+
+  .mobileNav {
+    background: #1a1a1a;
+  }
+
+  .mobileNavLink {
+    color: #fff;
+  }
+
+  .mobileNavLink:hover {
+    background: #333;
+  }
+}
+

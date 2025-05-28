@@ -1,5 +1,4 @@
 import type { NextConfig } from 'next';
-
 const nextConfig: NextConfig = {
   // output: 'export',
   reactStrictMode: true,
@@ -7,9 +6,7 @@ const nextConfig: NextConfig = {
   typescript: { ignoreBuildErrors: true },
   webpack: (config) => {
     config.resolve.symlinks = false;
-
     return config;
   },
 };
-
 export default nextConfig;

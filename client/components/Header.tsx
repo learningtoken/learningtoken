@@ -1,3 +1,4 @@
+// ===== client/components/Header.tsx（シンプル版） =====
 'use client';
 
 import Link from 'next/link';
@@ -9,7 +10,7 @@ import styles from './Header.module.css';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // スクロールロック（フック使用）
+  // スクロールロック
   useBodyScrollLock(isMenuOpen);
 
   const toggleMenu = () => {
@@ -35,11 +36,13 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
+        {/* ロゴ */}
         <Link href={pagesPath.$url()} className={styles.logo} onClick={closeMenu}>
           <img src="/logo.svg" alt="Company Logo" />
-          <span className={styles.logoText}>株式会社サンプル</span>
+          <span className={styles.logoText}>Learning Token株式会社</span>
         </Link>
 
+        {/* デスクトップメニュー */}
         <nav className={styles.desktopNav}>
           <Link href={pagesPath.$url()} className={styles.navLink}>
             ホーム
@@ -55,6 +58,7 @@ export default function Header() {
           </Link>
         </nav>
 
+        {/* ハンバーガーメニューボタン */}
         <button 
           className={`${styles.hamburger} ${isMenuOpen ? styles.hamburgerOpen : ''}`}
           onClick={toggleMenu}
@@ -66,6 +70,7 @@ export default function Header() {
           <span className={styles.hamburgerLine}></span>
         </button>
 
+        {/* モバイルメニュー */}
         <nav className={`${styles.mobileNav} ${isMenuOpen ? styles.mobileNavOpen : ''}`}>
           <div className={styles.mobileNavContent}>
             <Link 
@@ -103,6 +108,7 @@ export default function Header() {
           </div>
         </nav>
 
+        {/* オーバーレイ */}
         {isMenuOpen && (
           <div 
             className={styles.overlay} 
@@ -114,3 +120,4 @@ export default function Header() {
     </header>
   );
 }
+

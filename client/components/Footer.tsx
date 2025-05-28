@@ -6,14 +6,16 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.section}>
-            <h3>株式会社サンプル</h3>
-            <p>〒100-0001 東京都千代田区千代田1-1-1</p>
-            <p>TEL: 03-1234-5678</p>
-            <p>Email: info@sample-company.com</p>
+            <h3>Learning Token株式会社設立準備室</h3>
+            <div className={styles.p}>
+             <p>住所:〒543-0054<br></br> 大阪市天王寺区南河堀町4番88号<br></br> 国立大学法人大阪教育大学天王寺キャンパス内<br></br> みらい教育共創館5階504号室</p>
+             <p>TEL: 06-6718-4688</p>
+            <p>Email: contact@learningtoken.com</p>
+           </div>
           </div>
         </div>
         <div className={styles.copyright}>
-          <p>&copy; 2025 Sample Company. All rights reserved.</p>
+          <p>&copy; 2025 Learning Token Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>

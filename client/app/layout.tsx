@@ -4,8 +4,8 @@ import Footer from 'components/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: '株式会社サンプル - 会社紹介サイト',
-  description: '株式会社サンプルの会社概要、事業内容、役員紹介をご覧いただけます。',
+  title: 'Learning Token株式会社 - 紹介サイト',
+  description: 'Learning Token株式会社の会社概要、事業内容、役員紹介をご覧いただけます。',
   icons: {
     icon: '/favicon.ico',
   },

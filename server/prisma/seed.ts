@@ -1,8 +1,15 @@
+// ===== 完全な更新版seed.ts =====
+
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
 async function main() {
+  // 既存データをクリア
+  await prisma.executive.deleteMany();
+  await prisma.businessContent.deleteMany();
+  await prisma.company.deleteMany();
+
   // 会社情報
   await prisma.company.create({
     data: {
@@ -41,27 +48,27 @@ async function main() {
     });
   }
 
-  // 役員情報
+  // 役員情報（更新版）
   const executives = [
     {
-      name: '田中 太郎',
-      position: '代表取締役社長',
-      biography: '大手IT企業で20年間のシステム開発経験を積んだ後、2015年に当社を設立。業界のトレンドを先読みし、お客様に最適なソリューションを提供することをモットーとしています。',
-      photo: '/executives/tanaka.svg',
+      name: '田中 花子',
+      position: 'CIO（最高情報責任者）',
+      biography: 'コンピュータサイエンス修士号を取得後、大手テクノロジー企業で15年間システムアーキテクトとして活躍。AI・機械学習分野での豊富な経験を持ち、2020年に当社CIOに就任。デジタルトランスフォーメーションを推進し、革新的な技術ソリューションの開発を統括しています。',
+      photo: '/executives/tanaka_hanako.svg',
       order: 1,
     },
     {
-      name: '佐藤 花子',
-      position: '取締役CTO',
-      biography: 'システムエンジニアとして15年の経験を持ち、特にクラウド技術とセキュリティ分野に精通。当社の技術戦略の立案と実行を担当し、エンジニアチームを率いています。',
-      photo: '/executives/sato.svg',
+      name: '佐藤 次郎',
+      position: 'COO（最高執行責任者）',
+      biography: 'MBA取得後、複数の企業で事業運営を担当し、20年以上の経営経験を積む。特に業務プロセス最適化とチーム管理に長けており、2019年に当社COOに就任。全社的な業務執行の責任者として、効率的な組織運営と戦略実行を推進しています。',
+      photo: '/executives/sato_jiro.svg',
       order: 2,
     },
     {
-      name: '山田 次郎',
-      position: '取締役営業部長',
-      biography: 'IT業界での営業経験20年。お客様のニーズを的確に把握し、最適なソリューションをご提案することで、多くのお客様から信頼をいただいています。',
-      photo: '/executives/yamada.svg',
+      name: '山田 太郎',
+      position: 'CFO（最高財務責任者）',
+      biography: '公認会計士資格を持ち、大手監査法人での勤務を経て、上場企業の財務部門で15年間の経験を積む。2021年に当社CFOに就任し、財務戦略の立案・実行、投資判断、リスク管理を担当。健全な財務基盤の構築と持続的成長を支えています。',
+      photo: '/executives/yamada_taro.svg',
       order: 3,
     },
   ];
@@ -72,7 +79,11 @@ async function main() {
     });
   }
 
-  console.log('Seed data has been inserted successfully!');
+  console.log('Updated seed data has been inserted successfully!');
+  console.log('Created executives:');
+  console.log('- 田中 花子 (CIO - 女性)');
+  console.log('- 佐藤 次郎 (COO - 男性)');
+  console.log('- 山田 太郎 (CFO - 男性)');
 }
 
 main()
