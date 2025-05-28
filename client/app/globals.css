@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -56,3 +60,5 @@ button:focus {
   outline: 2px solid #007bff;
   outline-offset: 2px;
 }
+
+#NEXT_PUBLIC_API_BASE_PATH=https://www.learningtoken.com/api

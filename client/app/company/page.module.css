@@ -80,3 +80,199 @@
     margin: 0 auto;
   }
 }
+
+/* 新しく追加するスタイル */
+.businessSection {
+  margin-top: 80px;
+  padding-top: 50px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.businessSection h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.businessGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.businessCard {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.businessCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.businessIcon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.businessCard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #1e40af;
+}
+
+.businessCard p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.visionSection {
+  margin-top: 80px;
+  padding: 50px 0;
+  background: linear-gradient(135deg, #1e40af 0%, #64748b 100%);
+  border-radius: 20px;
+  color: white;
+}
+
+.visionMissionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 0 40px;
+}
+
+.visionCard,
+.missionCard {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.visionCard h2,
+.missionCard h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.visionCard p,
+.missionCard p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.historySection {
+  margin-top: 80px;
+}
+
+.historySection h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #1e40af;
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timelineItem:nth-child(odd) {
+  flex-direction: row;
+}
+
+.timelineItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timelineDate {
+  flex: 0 0 120px;
+  text-align: center;
+  font-weight: bold;
+  color: #1e40af;
+  font-size: 1.1rem;
+  padding: 10px;
+  background: white;
+  border: 2px solid #1e40af;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  margin: 0 20px;
+}
+
+.timelineContent {
+  flex: 1;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  margin: 0 20px;
+}
+
+.timelineContent h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.timelineContent p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .visionMissionGrid {
+    padding: 0 20px;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timelineItem {
+    flex-direction: column !important;
+    padding-left: 50px;
+  }
+  
+  .timelineDate {
+    position: absolute;
+    left: -60px;
+    top: 20px;
+    width: 100px;
+    margin: 0;
+  }
+  
+  .timelineContent {
+    margin: 0;
+  }
+}
