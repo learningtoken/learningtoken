@@ -19,6 +19,7 @@ export default function Company() {
     logo: "/company-logo.svg",
     description: "Learning Token株式会社は、従来の「制度ベーストラスト」から「価値ベーストラスト」への転換を通じて、学びの価値を可視化し、持続可能で包摂的な社会の実現に貢献する革新的企業です。Learning Token Platform（LTP）を通じて、教育提供者・学習者・雇用主の三者が共通の信頼基盤で学習価値を取引できるエコシステムを構築し、「学習立国」としての日本の未来を創造します。",
     establishedDate: "設立準備中（2025年予定）",
+<<<<<<< HEAD
     address: "東京都千代田区飯田橋（予定）",
     phone: "準備中",
     email: "info@learningtoken.jp（準備中）",
@@ -26,6 +27,15 @@ export default function Company() {
     capitalStock: "未定",
     employees: "準備中",
     ceo: "未定"
+=======
+    address: "大阪市天王寺区南河堀町4番88号 国立大学法人大阪教育大学天王寺キャンパス内 みらい教育共創館5階504号室(準備室）",
+    phone: "06-6718-4688",
+    email: "contact@learningtoken.com",
+    website: "https://learningtoken.con",
+    capitalStock: "未定",
+    employees: "準備中",
+    ceo: "堀真寿美"
+>>>>>>> 7a592ec (Fix:client-executive update)
   };
 
   if (loading) {
