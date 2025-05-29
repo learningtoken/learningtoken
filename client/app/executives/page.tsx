@@ -18,8 +18,8 @@ export default function Executives() {
             id: 1,
             name: "堀 真寿美",
             position: "代表取締役CEO",
-            photo: "/executives/tanaka_hanako.svg",
-            biography: "外資系戦略コンサルティングファームにて10年間勤務後、複数のEdTechスタートアップを設立・成長させ、2社のIPOを達成。学習価値の可視化と教育の民主化というビジョンに基づき、Learning Token株式会社を設立。"
+            photo: "/executives/masumi_hori.svg",
+            biography: "大阪教育大学特任教授。大手電機メーカーに数年勤務した後，大学に戻りオンライン教育のシステム開発に20年携わった。その後，NPO法人を設立して大学からスピンアウト。学習価値の可視化と教育の民主化というビジョンに基づき、Learning Token株式会社を設立。"
           },
           {
             id: 2,
