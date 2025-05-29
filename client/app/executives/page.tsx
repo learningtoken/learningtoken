@@ -32,8 +32,8 @@ export default function Executives() {
             id: 3,
             name: "坂下 秀",
             position: "取締役CTO",
-            photo: "/executives/yamada_taro.svg",
-            biography: "大手監査法人、投資銀行を経て、複数のスタートアップにてCFOとして資金調達・財務戦略を担当。累計100億円以上の資金調達実績を持ち、Learning Token株式会社の財務基盤構築と成長戦略を推進。"
+            photo: "/executives/shiu_sakashita.svg",
+            biography: "1985年よりソフトウェア開発に従事し、複数の企業でネットワーク・組み込み・大規模システム開発を手がけてきた。2003年に創業したアクタスソフトウェア株式会社では、研究機関や放送・通信分野の受託開発に長年従事。これまでの技術的経験とマネジメント経験を活かし、Learning Token株式会社の事業の成長と技術力の強化を推進してゆく。"
           }
         ];
         
