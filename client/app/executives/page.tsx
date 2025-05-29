@@ -25,8 +25,8 @@ export default function Executives() {
             id: 2,
             name: "小野 成志",
             position: "取締役COO",
-            photo: "/executives/sato_jiro.svg",
-            biography: "大手人材会社にて事業開発・営業統括を歴任。その後、複数のスタートアップにてCOOとして事業拡大を牽引。人材マッチングと教育サービスの豊富な経験を活かし、Learning Token Platformの事業展開と運営を統括。"
+            photo: "/executives/seishi_ono.svg",
+            biography: "私立大学でインターネットを立ち上げからシステム運用管理，セキュリティ対策などを手掛け，さらに，大学の理事として，教育サービス，人事管理までを幅広く手掛けた後，教育コンサルタントとしての経験を積む。人材マッチングと教育サービスの豊富な経験を活かし、Learning Token Platformの事業展開と運営を統括する。"
           },
           {
             id: 3,
