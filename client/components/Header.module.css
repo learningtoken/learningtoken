@@ -174,20 +174,20 @@
   .container {
     padding: 0 15px;
   }
-
+  
   .logoText {
     display: block;
   }
-
+  
   .logo img {
     height: 35px;
   }
-
+  
   /* デスクトップメニューを非表示 */
   .desktopNav {
     display: none;
   }
-
+  
   /* ハンバーガーメニューを表示 */
   .hamburger {
     display: flex;
@@ -198,20 +198,20 @@
   .logoText {
     font-size: 1rem;
   }
-
+  
   .mobileNav {
     width: 100vw;
     right: -100vw;
   }
-
+  
   .mobileNavOpen {
     right: 0;
   }
-
+  
   .container {
     height: 60px;
   }
-
+  
   .logo img {
     height: 30px;
   }
@@ -227,30 +227,37 @@
   }
 }
 
-/* ダークモード対応 */
+/* ダークモード対応（修正版） */
 @media (prefers-color-scheme: dark) {
   .header {
     background: #1a1a1a;
     box-shadow: 0 2px 4px rgba(255,255,255,0.1);
   }
-
+  
   .navLink,
-  .logoText,
-  .hamburgerLine {
+  .logoText {
     color: #fff;
+  }
+  
+  .hamburgerLine {
     background: #fff;
   }
-
+  
   .mobileNav {
     background: #1a1a1a;
+    box-shadow: -2px 0 10px rgba(255,255,255,0.1);
   }
-
+  
   .mobileNavLink {
     color: #fff;
   }
-
+  
   .mobileNavLink:hover {
     background: #333;
+    color: #007bff;
+  }
+  
+  .navLink:hover {
+    color: #007bff;
   }
 }
-
