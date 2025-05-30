@@ -127,7 +127,10 @@ export default function Home() {
               <p>「MBA取得者」が実際にどんな経営知識を持つか判断不可能</p>
             </div>
           </div>
-          <div className={styles.arrow}>→</div>
+          <div className={styles.transformationBridge}>
+            <div className={styles.bridgeLine}></div>
+            <div className={styles.bridgeLabel}>変革</div>
+          </div>
           <div className={styles.newTrust}>
             <h3>✅ 価値ベーストラスト</h3>
             <div className={styles.trustSolution}>
@@ -185,19 +188,16 @@ export default function Home() {
             <h3>学び前LT発行</h3>
             <p>プロバイダーが学びの内容ハッシュと署名を封入してトークン発行</p>
           </div>
-          <div className={styles.flowArrow}>→</div>
           <div className={styles.flowStep}>
             <div className={styles.stepNumber}>2</div>
             <h3>AI自動生成学習</h3>
             <p>合成音声ビデオ解説と確認テストを自動生成</p>
           </div>
-          <div className={styles.flowArrow}>→</div>
           <div className={styles.flowStep}>
             <div className={styles.stepNumber}>3</div>
             <h3>学び後LT完成</h3>
             <p>学び手署名追加で「誰が・何を・いつ学んだか」を暗号学的保証</p>
           </div>
-          <div className={styles.flowArrow}>→</div>
           <div className={styles.flowStep}>
             <div className={styles.stepNumber}>4</div>
             <h3>市場価値評価</h3>
@@ -333,7 +333,7 @@ export default function Home() {
             </button>
           </div>
           <p className={styles.ctaNote}>
-            ※本プロジェクトはJST-RISTEX「科学技術と社会をつなぐ総合知の創出」プログラムへの提案を準備中です
+            ※Learning Token 株式会社は設立準備中です。
           </p>
         </div>
       </section>
